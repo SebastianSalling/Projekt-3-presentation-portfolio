@@ -47,8 +47,7 @@ nav ul {
 }
 
 nav li {
-    padding: 5px;
-    margin: 5px 20px;
+    padding: 10px;
     font-family: 'Taviraj', serif;
     font-size: 25px;
     font-weight: 400;
@@ -66,6 +65,17 @@ a:hover {
 }
 
 
+.nav-undersider {
+    background-color: #090606;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .nav-undersider {
+        display: flex;
+        justify-content: center;
+    }
+}
 
 
 /* hero */
@@ -74,7 +84,7 @@ a:hover {
     background-image: url(../images/forside-hero-image.jpg);
     background-size: cover;
     background-position: center;
-    height: 50vh;
+    height: 50vh; /* det her fucker med nav på undersider */
     display: flex;
     flex-direction: column;
 }
@@ -231,4 +241,86 @@ footer {
     padding: 50px;
 }
 
+
+
+
+
+
+/* om mig */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr 4fr 1fr;
+    height: 100%;
+}
+
+.overskrift {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    background-color: #82989c;
+    font-family: 'Taviraj', serif;
+    font-size: 40px;
+    font-weight: 600;
+    font-style: bold;
+    color: #367D8B;
+    padding: 30px; 
+}
+
+
+.kontakt-info {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    
+    background-color: #E58080;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: bold;
+    padding: 10px;
+}
+
+.mail {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.tlf {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.indhold {
+    background-color: #F39A33;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.adobe-programmer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #82989c;
+    padding: 10px;
+}
+
+
+.profil-billede {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
 
