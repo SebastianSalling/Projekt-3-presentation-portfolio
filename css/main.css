@@ -33,9 +33,6 @@ Black 900
 /* navigationsmenu */
 
 nav {
-    /*display: flex;
-    justify-content: flex-end;
-    align-items: center;*/
     color: #E8E8E8;
 }   
 
@@ -88,20 +85,18 @@ a:hover {
     background-image: url(../images/forside-hero-image.jpg);
     background-size: cover;
     background-position: center;
-    height: 50vh; /* det her fucker med nav på undersider */
-    display: flex;
-    flex-direction: column;
+    height: 50vh;
 }
 
 
 .hero-text {
-    text-align: center;
     color: #E8E8E8;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    padding: 30px;
 }
 
 
@@ -125,101 +120,125 @@ a:hover {
     font-size: 30px;
     font-weight: 700;
     font-style: bold;
-    color: #E58080;
+    color: #367D8B;
 }
 
 
-/*
-header h1, p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
 
 /* indhold */
 
 
-.forside-tekst {
-    padding: 100px;
-    display: flex;
-    justify-content: end;
-    background-color: #E8E8E8;
-
+.forside-container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 1fr 3fr 1fr 3fr 1fr 1fr;
+    height: 100%;
 }
 
-
-.forside-underoverskrift {
-    font-family: 'Taviraj', serif;
-    font-size: 40px;
-    font-weight: 600;
-    font-style: bold;
-    color: #367D8B; 
-}
 
 .forside-paragraf {
+    grid-column-start: 3;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    
     font-family: 'Fira Sans', sans-serif;
     font-size: 20px;
     font-weight: 400;
+    padding: 10px;
+    margin: 0 50px 50px 50px;
 }
 
-
-
-
-
-
-.udvalg {
-    background-color: #c8c2c2;
-    padding: 100px;
-    
-}
-
-.udvalg-tekst {
-    text-align: center;
-    padding: 50px 0px;
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    font-style: italic;
-    color: #E58080;
-}
 
 
 .udvalg-overskrift {
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    padding: 25px;
+    background-color: #4b4e52;
+}
+
+h2 {
     text-align: center;
-    
     font-family: 'Taviraj', serif;
     font-size: 40px;
     font-weight: 600;
     font-style: bold;
     color: #F39A33;
 }
+    
+
 
 
 .se-alle {
     text-align: center;
-    padding-top: 100px;
+    padding: 50px;
     font-family: 'Fira Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
     font-style: bold;
     color: #E8E8E8;
+    background-color: #4b4e52;
+    margin-bottom: 100px;
+
+    grid-column-start: 2;
+    grid-column-end: 11;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
 }
 
 
 img {
     max-width: 100%;
     max-height: 50vh;
-    
-    
 }
 
+video {
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+/*
 .showcase {
     display: flex;
     justify-content: space-between;
 
     
+}*/
+
+
+.showcase1, .showcase2, .showcase3 {
+    background-color: #c5c4c4;
+    padding: 30px;
 }
+
+
+.showcase1 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.showcase2 {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.showcase3 {
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
 
 .showcase-text {
     text-align: center;
@@ -230,25 +249,12 @@ img {
 }
 
 
-
-.kontakt {
-    padding: 100px;
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    font-style: bold;
+.forside-kontakt {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    grid-row-end: 7;
 }
-
-
-
-footer {
-    background-color: #090606;
-    padding: 50px;
-}
-
-
-
-
 
 
 /* om mig */
@@ -291,16 +297,13 @@ footer {
     grid-row-end: 6;
 }
 
-.kontakt-info, .kontakt-info-2 {
+.kontakt-info, .kontakt-info-2, .forside-kontakt {
     background-color: #E8E8E8;
     font-family: 'Fira Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
     font-style: bold;
     padding: 50px;
-
-    
-    
 }
 
 .mail, .tlf, .tlf2, .mail2 {
@@ -339,7 +342,7 @@ footer {
 
 .profil-billede {
     grid-column-start: 1;
-    grid-column-end: 12;
+    grid-column-end: -1;
     grid-row-start: 4;
     grid-row-end: 5;
     background-color: #070404;
@@ -441,6 +444,27 @@ footer {
 
 
 @media only screen and (max-width: 1100px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr 5fr 1fr 4fr 1fr;
+        height: 100%;
+    }
+
+    .indhold {
+        grid-column-start: 2;
+        grid-column-end: 8;
+        margin: 0 20px 0 20px;
+    }
+
+    .adobe-programmer {
+        grid-column-start: 2;
+        grid-column-end: 8;
+        margin: 20px 20px 30px 20px;
+    }
+
+
     .container-2 {
         display: grid;
         grid-template-columns: 1fr 4fr 4fr 1fr;
@@ -490,16 +514,84 @@ footer {
         padding: 20px;
     }
 
+    .kontakt-info, .kontakt-info-2, .forside-kontakt {
+        font-size: 25px;
+    }
+
+    .mail, .tlf, .tlf2, .mail2 {
+        font-size: 17.5px;
+    }
+
     .overskrift {
         margin-bottom: 30px;
+        font-size: 35px;
+        padding: 25px;
     }
 
-    .indhold {
-        margin: 0 20px 0 20px;
+    h2 {
+        font-size: 35px;
     }
 
-    .adobe-programmer {
-        margin: 20px 20px 30px 20px;
+    .forside-container {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: 1fr 3fr 1fr 3fr 1fr 1fr;
+        height: 100%;
+    }
+
+
+    .udvalg-overskrift {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        padding: 20px;
+    }
+
+    .se-alle {
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+
+    .forside-paragraf {
+        grid-column-start: 2;
+        grid-column-end: 9;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        padding: 10px;
+        margin: 0 50px 50px 50px;
+    }
+
+
+    .showcase1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    
+    
+    }
+    
+    .showcase2 {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        
+    }
+    
+    .showcase3 {
+        grid-column-start: 7;
+        grid-column-end: 10;
+        
+    }
+
+    .hero-taviraj {
+        font-size: 35px;
+    }
+
+    .hero-italic, .hero-bold {
+        font-size: 27.5px;
+    }
+
+    .hero {
+        background-image: url(../images/forside-hero-image-small.jpg);
     }
 }
 
@@ -580,9 +672,107 @@ footer {
 
     .overskrift {
         margin-bottom: 20px;
+        padding: 20px;
     }
+
 
     .adobe-programmer {
         margin: 20px 0;
+    }
+
+
+    .forside-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 3fr 1fr 3fr 3fr 3fr 1fr 1fr;
+        height: 100%;
+    }
+
+
+
+    .forside-paragraf {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+
+        padding: 10px;
+        margin: 0 50px 20px 50px;
+    }
+
+    .udvalg-overskrift {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 15px;
+    }
+
+    .showcase1 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    
+    
+    }
+    
+    .showcase2 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        
+    }
+    
+    .showcase3 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 7;
+        
+    }
+
+    .se-alle {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 7;
+        grid-row-end: 8;
+
+        margin-bottom: 0;
+    }
+
+    .forside-kontakt {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 8;
+        grid-row-end: 9;
+    }
+
+    .hero-taviraj {
+        font-size: 30px;
+    }
+
+    .hero-italic, .hero-bold {
+        font-size: 25px;
+    }
+
+    .kontakt-info, .kontakt-info-2, .forside-kontakt {
+        font-size: 20px;
+    }
+
+    .mail, .tlf, .tlf2, .mail2 {
+        font-size: 15px;
+    }
+
+    .hero {
+        background-image: url(../images/forside-hero-image-smaller.jpg);
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
     }
 }
