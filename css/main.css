@@ -203,15 +203,6 @@ video {
     max-height: 50vh;
 }
 
-/*
-.showcase {
-    display: flex;
-    justify-content: space-between;
-
-    
-}*/
-
-
 .showcase1, .showcase2, .showcase3 {
     background-color: #c5c4c4;
     padding: 30px;
@@ -258,14 +249,6 @@ video {
 
 
 /* om mig */
-
-/*
-.container {
-    display: grid;
-    grid-template-columns: 1fr 9fr 1fr;
-    grid-template-rows: 1fr 5fr 1fr 4fr 1fr;
-    height: 100%;
-}*/
 
 .container {
     display: grid;
@@ -374,14 +357,6 @@ video {
     object-fit: cover;
 }
 
-/*
-.indhold-2 {
-    background-color: #F39A33;
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 10px;
-}*/
 
 .item1 {
     grid-column-start: 2;
